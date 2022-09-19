@@ -36,7 +36,7 @@ public class PickPeaksTest {
             final int[] p1 = posS[n], p2 = peaksS[n];
             Map<String,List<Integer>> expected = new HashMap<String,List<Integer>>() {{
                                           put("pos",   Arrays.stream(p1).boxed().collect(Collectors.toList()));
-                                          put("peeks", Arrays.stream(p2).boxed().collect(Collectors.toList()));
+                                          put("peaks", Arrays.stream(p2).boxed().collect(Collectors.toList()));
                                       }},
                                       actual = PickPeaks.getPeaks(array[n]);
             assertEquals(msg[n], expected, actual);
