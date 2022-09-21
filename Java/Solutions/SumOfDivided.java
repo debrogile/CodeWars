@@ -1,7 +1,6 @@
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 /**
@@ -60,12 +59,8 @@ public class SumOfDivided {
             }
         }
 
-        return map.entrySet().stream().sorted(new Comparator<Entry<Integer, Integer>>() {
-            @Override
-            public int compare(Entry<Integer, Integer> a, Entry<Integer, Integer> b) {
-                return a.getKey() - b.getKey();
-            }
-        }).map(entry -> String.format("(%d %d)", entry.getKey(), entry.getValue()))
+        return map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getKey))
+                .map(entry -> String.format("(%d %d)", entry.getKey(), entry.getValue()))
                 .collect(Collectors.joining());
     }
 }
