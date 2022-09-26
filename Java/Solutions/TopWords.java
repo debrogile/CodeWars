@@ -62,14 +62,10 @@ public class TopWords {
     public static List<String> top3(String s) {
         Map<String, Integer> map = new HashMap<>();
 
-        Matcher matcher = Pattern.compile("([a-zA-Z\']+)[,\\s]*").matcher(s.toLowerCase());
+        Matcher matcher = Pattern.compile("[a-z][a-z']*").matcher(s.toLowerCase());
         while (matcher.find()) {
-            String word = matcher.group(1);
-            if (map.containsKey(word)) {
-                map.put(word, map.get(word) + 1);
-            } else {
-                map.put(word, 1);
-            }
+            String word = matcher.group();
+            map.put(word, map.getOrDefault(word, 0) + 1);
         }
 
         return map.entrySet().stream().sorted(Comparator.comparing(Map.Entry::getValue, Comparator.reverseOrder()))
