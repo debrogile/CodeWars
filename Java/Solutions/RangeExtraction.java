@@ -26,29 +26,23 @@
 public class RangeExtraction {
     public static String rangeExtraction(int[] arr) {
         StringBuilder sb = new StringBuilder();
-        int count = 0;
         for (int i = 0; i < arr.length; i++) {
-            if (i == 0) {
-                sb.append(arr[i]);
-            } else if (arr[i] == arr[i - 1] + 1) {
-                if (i == arr.length - 1) {
-                    sb.append(count > 0 ? "-" : ",");
-                    sb.append(arr[i]);
-                } else {
-                    count++;
-                }
-            } else if (count == 0) {
-                sb.append(",");
-                sb.append(arr[i]);
-            } else {
-                sb.append(count == 1 ? "," : "-");
-                sb.append(arr[i - 1]);
-                sb.append(",");
-                sb.append(arr[i]);
-                count = 0;
+            sb.append(arr[i]);
+
+            int j = i;
+            while (j < arr.length - 1 && arr[j] + 1 == arr[j + 1]) {
+                j++;
             }
+
+            if (i + 1 < j) {
+                i = j;
+                sb.append("-");
+                sb.append(arr[j]);
+            }
+            sb.append(",");
         }
 
+        sb.setLength(sb.length() - 1);
         return sb.toString();
     }
 }
