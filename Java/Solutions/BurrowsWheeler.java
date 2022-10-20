@@ -84,6 +84,8 @@ import java.util.Arrays;
  *              just in proximity, after the transformation. If you're
  *              interested
  *              in how to deal with that, you should have a look at this Kata.
+ * 
+ * @link https://www.codewars.com/kata/54ce4c6804fcc440a1000ecb
  */
 class BWT {
     public String s;
