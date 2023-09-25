@@ -1,3 +1,5 @@
+package azelea.codewars;
+
 /**
  * Not very secure <5kyu>
  * 

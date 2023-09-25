@@ -1,3 +1,5 @@
+package azelea.codewars;
+
 /**
  * Range Extraction <4kyu>
  * 

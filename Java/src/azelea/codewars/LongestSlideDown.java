@@ -1,3 +1,5 @@
+package azelea.codewars;
+
 /**
  * Pyramid Slide Down <4kyu>
  * 

@@ -1,3 +1,5 @@
+package azelea.codewars;
+
 /**
  * Tribonacci Sequence <6kyu>
  * 

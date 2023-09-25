@@ -1,3 +1,5 @@
+package azelea.codewars;
+
 /**
  * What's a Perfect Power anyway? <5kyu>
  * 

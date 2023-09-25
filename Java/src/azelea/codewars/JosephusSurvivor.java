@@ -1,3 +1,5 @@
+package azelea.codewars;
+
 /**
  * Josephus Survivor <5kyu>
  * 

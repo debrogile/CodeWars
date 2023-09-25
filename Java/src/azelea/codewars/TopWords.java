@@ -1,3 +1,5 @@
+package azelea.codewars;
+
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;

@@ -1,8 +1,18 @@
+package azelea.codewars.test;
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import azelea.codewars.BurrowsWheeler;
+
 public class BurrowsWheelerTest {
+    private class BWT {
+        public BWT(String s, int n) {
+
+        }
+    }
+    
     @Test
     public void decodeTests() {
         assertEquals("bananabar",     BurrowsWheeler.decode("nnbbraaaa", 4));
